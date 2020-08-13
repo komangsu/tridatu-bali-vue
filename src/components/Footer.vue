@@ -39,8 +39,8 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-12 col-lg-3 col-12 my-sm-0 mt-5">
-            <ul class="list-unstyled ml-5">
+          <div class="col-md-12 col-lg-3 col-12 my-sm-0 mt-5 mt-0-s">
+            <ul class="list-unstyled ml-5 ml-0-s">
               <li class="mt-md-3 mt-4">Informasi</li>
               <li>Tentang Kami</li>
               <li>Panduan Belanja</li>
@@ -48,7 +48,7 @@
               <li>Kebijakan Privasi</li>
             </ul>
           </div>
-          <div class="col-md-12 col-lg-3 col-12 my-sm-0 mt-5">
+          <div class="col-md-12 col-lg-3 col-12 my-sm-0 mt-5 mt-0-s">
             <ul class="list-unstyled multi-bank">
               <li class="mt-md-3 mt-4 mb-2">Metode Pengiriman</li>
               <div class="img-bank">
@@ -180,5 +180,14 @@ footer {
 }
 .multi-bank {
   max-width: 216px;
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .ml-0-s {
+    margin-left: 0!important;
+  }
+  .mt-0-s {
+    margin-top: 0!important;
+  }
 }
 </style>

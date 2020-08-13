@@ -9,8 +9,20 @@
             Tridatu<span class="text-muted font-weight-bold"> Bali ID</span>
           </span>
         </a>
+        <div class="navbar-bell-toggler d-lg-none">
+          <a href="#" class="notification">
+            <i class="far fa-bell fa-lg"></i>
+            <span class="badge badge-danger">4</span>
+          </a>
+        </div>
+        <div class="navbar-cart-toggler d-lg-none">
+          <a href="#" class="notification">
+            <i class="far fa-shopping-cart fa-lg"></i>
+            <span class="badge badge-danger">4</span>
+          </a>
+        </div>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -36,9 +48,11 @@
                 Kategori
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">T-shirt</a>
-                <a class="dropdown-item" href="#">Accessories</a>
-                <a class="dropdown-item" href="#">Jacket</a>
+                <a class="dropdown-item" href="#">Aksesoris</a>
+                <a class="dropdown-item" href="#">Baju</a>
+                <a class="dropdown-item" href="#">Celana</a>
+                <a class="dropdown-item" href="#">Jaket</a>
+                <a class="dropdown-item" href="#">Tas Selempang</a>
               </div>
             </li>
             <li class="nav-item active mr-2">
@@ -48,7 +62,7 @@
             </li>
           </ul>
           <form class="form-inline mr-4">
-            <div class="input-group w-500">
+            <div class="input-group w-29 w-500 w-100-s">
               <input
                 class="form-control border-0 bg-gray-search outline-search"
                 type="search"
@@ -63,30 +77,32 @@
             </div>
           </form>
           <ul class="navbar-nav">
-            <li class="nav-item mr-2">
-              <a class="nav-link button-badge" href="#"
-                ><i class="far fa-shopping-cart fa-lg"></i>
-                <span class="badge-notif pill h6">4</span>
-              </a>
-            </li>
-            <li class="nav-item mr-2">
-              <a class="nav-link button-badge" href="#">
+            <div class="navbar-bell-toggler align-self-center d-none d-lg-block">
+              <a href="#" class="notification">
                 <i class="far fa-bell fa-lg"></i>
-                <span class="badge-notif pill h6">4</span>
+                <span class="badge badge-danger">4</span>
               </a>
-            </li>
-            <li class="nav-item mr-2">
-              <a class="nav-link" href="#">
-                <i class="far fa-heart fa-lg"></i>
+            </div>
+            <div class="navbar-cart-toggler align-self-center mr-2 d-none d-lg-block">
+              <a href="#" class="notification">
+                <i class="far fa-shopping-cart fa-lg"></i>
+                <span class="badge badge-danger">4</span>
               </a>
-            </li>
+            </div>
 
             <div class="border-right mr-4"></div>
 
-            <li class="nav-item mr-2 align-self-center">
+            <li class="nav-item d-lg-none">
+              <a class="nav-link" href="#">Masuk</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link" href="#">Daftar</a>
+            </li>
+
+            <li class="nav-item mr-2 align-self-center d-none d-lg-block">
               <a type="button" class="btn btn-sm btn-outline-dark">Masuk</a>
             </li>
-            <li class="nav-item align-self-center">
+            <li class="nav-item align-self-center d-none d-lg-block">
               <a type="button" class="btn btn-sm btn-secondary">Daftar</a>
             </li>
           </ul>
@@ -103,7 +119,12 @@ export default {};
 
 <style scoped>
 .w-500 {
-  width: 30vw !important;
+  width: 480px;
+}
+@media (max-width: 1199.98px) {
+  .w-29 {
+    width: 29vw !important;
+  }
 }
 .bg-gray-search {
   background-color: #f1f3f5;
@@ -138,5 +159,48 @@ export default {};
 }
 .navbar-border-bottom {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 15px !important;
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .w-100-s {
+    width: 100%!important;
+  }
+}
+.navbar-bell-toggler {
+    padding: .25rem .75rem;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-left: auto;
+}
+.navbar-cart-toggler {
+    padding: .25rem .75rem;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.navbar-bell-toggler .badge {
+  background: #e85044;
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  font-size: 10px;
+  border-radius: 50%;
+}
+.navbar-cart-toggler .badge {
+  background: #e85044;
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  font-size: 10px;
+  border-radius: 50%;
+}
+.notification {
+  color: rgba(0,0,0,.5);
+  position: relative;
 }
 </style>
